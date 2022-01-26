@@ -36,6 +36,7 @@ public class ResetPlayer : MonoBehaviour
             float respawnZ = respawnPoint.transform.position.z;
 
             player.Move(new Vector3(respawnX-currentX,respawnY-currentY,respawnZ-currentZ));
+
         }
     }
 
