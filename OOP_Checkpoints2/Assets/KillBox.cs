@@ -21,9 +21,11 @@ public class KillBox : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Player.detectCollisions = false;
+            Player.GetComponent<Rigidbody>().useGravity = false;
+            //Player.enabled = false;
             Player.Move(new Vector3(0 - Player.transform.position.x, 0 - Player.transform.position.y, 0 - Player.transform.position.z));
-            Player.detectCollisions = true;
+            Player.enableOverlapRecovery = true;
+            //Player.enabled = true;
         }
     }
 }
